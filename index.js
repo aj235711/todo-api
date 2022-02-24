@@ -19,8 +19,10 @@ mongoose
   });
 
 app.use(cors());
+app.use(express.json());
 
 app.use(require("./routes/auth"));
+app.use(require("./routes/todo"));
 
 const PORT = process.env.PORT || 5000;
 
